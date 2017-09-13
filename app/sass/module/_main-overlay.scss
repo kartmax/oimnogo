@@ -1,0 +1,46 @@
+body {
+  position: relative;
+
+  .overlay-main-left,
+  .overlay-main-right {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    background: #dedede;
+    transition: 0.2s;
+  }
+
+  .overlay-main-left {
+    display: none;
+    height: 100%;
+
+    @media only screen and (min-width : 768px) {
+      display: block;
+      width: calc(100% - 370px);
+    }
+
+    @media only screen and (min-width : 1200px) {
+      width: 50%;
+    }
+  }
+
+  .overlay-main-right {
+    right: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    bottom: 0;
+
+    @media only screen and (min-width : 768px) {
+      width: 370px;
+    }
+
+    @media only screen and (min-width : 1200px) {
+      width: 50%;
+    }
+  }
+
+  .active-overlay {
+    z-index: 100;
+    opacity: 0.81;
+  }
+}

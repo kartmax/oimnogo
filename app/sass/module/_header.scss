@@ -1,0 +1,256 @@
+/*************************top header**************************/
+.top-heder {
+  position: relative;
+  min-height: 50px;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media only screen and (min-width : 768px) {
+    min-height: 70px;
+  }
+
+  @media only screen and (min-width : 1200px) {
+    min-height: 49px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (min-width : 1280px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+a.logo {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  color: #383838;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media only screen and (min-width : 768px) {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+
+  @media only screen and (min-width : 1200px) {
+    position: static;
+    order: 1;
+    display: flex;
+    align-items: center;
+    transform: translateY(0%);
+  }
+}
+
+a.user-log {
+  height: 26px;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  right: 62px;
+  transform: translateY(-50%);
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 0;
+
+  &:hover .user-icon {
+    fill: #d0f5ef;
+  }
+
+  @media only screen and (min-width : 768px) {
+    right: 80px;
+  }
+
+  @media only screen and (min-width : 1200px) {
+    order: 3;
+    position: static;
+    font-family: $second-font;
+    margin-left: 15px;
+    font-weight: 400;
+    color: #e5fefa;
+    @include fontSize(17px);
+    text-decoration: none;
+    transform: translateY(0%);
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 36px;
+    border-radius: 0 18px 18px 0;
+    border: 1px solid #b6e1d9;
+    
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.user-icon {
+  fill: #b9e6de;
+  width: 25px;
+  height: 25px;
+  transition: .25s ease-in-out;
+
+  @media only screen and (min-width : 1200px) {
+    display: none;
+  }
+}
+
+.bottom-header.maxwidth {
+  max-width: 1260px;
+
+  @media only screen and (min-width : 1200px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media only screen and (min-width : 1260px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.bottom-header {
+  padding-top: 20px;
+  display: flex;
+  flex-flow: column;
+
+  @media only screen and (min-width : 768px) {
+    flex-flow: row;
+    padding-top: 50px;
+  }
+
+  @media only screen and (min-width : 1200px) {
+    padding-top: 79px;
+  }
+
+  .bg-icon {
+    width: 200px;
+    margin: 0 auto;
+
+    @media only screen and (min-width : 320px) {
+      width: 250px;
+    }
+
+    @media only screen and (min-width : 630px) {
+      display: inline-block;
+      width: 250px;
+    }
+
+    @media only screen and (min-width : 768px) {
+      width: 350px;
+    }
+
+    @media only screen and (min-width : 1200px) {
+      width: 550px;
+    }
+  }
+
+  .description {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+
+    @media only screen and (min-width : 630px) {
+      max-width: inherit;
+      width: 65%;
+      padding-left: 40px;
+    }
+
+    @media only screen and (min-width : 1200px) {
+      margin-top: 60px;
+      padding-left: 0;
+    }
+
+    @media only screen and (min-width : 1400px) {
+      margin-top: 20px;
+    }
+  }
+
+  p {
+    font-family: $second-font;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    white-space: pre-line;
+    opacity: 0.9;
+
+    @media only screen and (min-width : 768px) {
+      font-size: 16px;
+    }
+
+    @media only screen and (min-width : 1200px) {
+      font-size: 20px;
+    }
+  }
+
+  .text-decor p {
+    position: relative;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    @media only screen and (min-width : 768px) {
+      font-size: 18px;
+    }
+
+    @media only screen and (min-width : 1200px) {
+      @include fontSize(25px);
+      font-size: 25px;
+    }
+
+    &:before {
+      @media only screen and (min-width : 768px) {
+        content: '';
+        position: absolute;
+        right: calc(100% + 20px);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 500%;
+        height: 1px;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+
+  .big-text {
+    font-size: 34px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 0;
+    opacity: 1;
+    line-height: 0.9;
+
+    @media only screen and (min-width : 768px) {
+      font-size: 44px;
+      padding-top: 5px;
+      padding-bottom: 19px;
+    }
+
+    @media only screen and (min-width : 1200px) {
+      @include fontSize(60px);
+      margin-top: -8px;
+      padding-top: 0;
+      padding-bottom: 20px;
+    }
+  }
+}

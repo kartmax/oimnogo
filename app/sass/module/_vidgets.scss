@@ -1,0 +1,64 @@
+.vidgets {
+  max-width: 1270px;
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: stretch;
+
+  @media only screen and (min-width : 768px) {
+    flex-flow: row;
+  }
+
+  @media only screen and (min-width : 1200px) {
+    margin: 80px auto 90px auto;
+  }
+
+  .item {
+    min-height: 90px;
+    background-color: #fcfcfc;
+    color: $color-title;
+    font-family: $second-font;
+    @include fontSize(17px);
+    font-weight: 700;
+    flex: 1;
+    margin: 10px 15px;
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 26px 13px -20px rgba(0, 0, 0, 0.13);
+    transition: 0.25s;
+
+    @media only screen and (min-width : 768px) {
+      @include fontSize(16px);
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    @media only screen and (min-width : 1200px) {
+      @include fontSize(23px);
+      padding: 10px 23px;
+    }
+
+    &:hover {
+      color: $color-text;
+      box-shadow: 0 26px 13px -20px rgba(0, 0, 0, 0.13), 0 26px 25px -20px rgba(0, 0, 0, 0.13);
+    }
+  }
+
+  .icon {
+    max-width: 70px;
+    width: 100%;
+    height: auto;
+    margin-right: 20px;
+
+    @media only screen and (min-width : 768px) {
+      max-width: 60px;
+    }
+
+    @media only screen and (min-width : 1200px) {
+      max-width: 100px;
+    }
+  }
+}
