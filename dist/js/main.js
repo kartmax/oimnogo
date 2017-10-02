@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
     });
 
     var NavHasSubmenu = $(Navigation).find('li.has-submenu');
-    $(NavHasSubmenu).append('<svg class="icon-open"><use xlink:href="img/main-svg.svg#next-prev" /></svg>');
+    $(NavHasSubmenu).append('<svg class="icon-open"><use xlink:href="#next-prev" /></svg>');
     var IconOpen = $('.icon-open');
     $(NavHasSubmenu).children('.sub-toggle').click(function () {
         $(this).parent('.has-submenu').children('.icon-open').toggleClass('transdeg');
