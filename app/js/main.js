@@ -27,14 +27,20 @@ jQuery(document).ready(function ($) {
     var NavHasSubmenu = $(Navigation).find('li.has-submenu');
     $(NavHasSubmenu).append('<svg class="icon-open"><use xlink:href="#next-prev" /></svg>');
     var IconOpen = $('.icon-open');
-    $(NavHasSubmenu).children('.sub-toggle').click(function () {
-        $(this).parent('.has-submenu').children('.icon-open').toggleClass('transdeg');
+
+    $(NavHasSubmenu).children('.sub-toggle').on('click', function () {
+        var screenMax = window.matchMedia('(max-width: 1200px)');
+        if (screenMax.matches) {
+            $(this).parent('.has-submenu').children('.icon-open').toggleClass('transdeg');
+        }
     });
-    if(window.matchMedia('(min-width: 1200px)').matches) {
-        $(NavHasSubmenu).hover(function () {
+    $(NavHasSubmenu).hover(function () {
+        var screenMin = window.matchMedia('(min-width: 1200px)');
+        if (screenMin.matches) {
             $(this).children('.icon-open').toggleClass('transdeg');
-        });
-    }
+        }
+    });
+
 
     var linkMenu = $(Navigation).find('a');
     linkMenu.click(function () {
@@ -66,7 +72,7 @@ jQuery(document).ready(function ($) {
     });
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         $(window).unbind('resize');
-    };
+    }
 
 
     //modal windows
