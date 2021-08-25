@@ -28,7 +28,7 @@ gulp.task('scripts', function() {
         'app/libs/owl.carousel/dist/owl.carousel.min.js',
         'app/libs/slimmenu-master/dist/js/jquery.slimmenu.min.js',
         'app/libs/datetimepicker-master/build/jquery.datetimepicker.full.min.js',
-        'app/libs/select2/dist/js/select2.min.js',
+        'app/libs/select2/js/select2.min.js',
         'app/libs/jQueryFormStyle/jquery.formstyler.min.js',
         'app/libs/jquery-ui/jquery-ui.min.js',// jQ Ui Slider для ползунков
         'app/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js',// jQ Ui Slider Touch для ползунков для их работы на моб

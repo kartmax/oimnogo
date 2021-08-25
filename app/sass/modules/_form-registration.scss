@@ -410,8 +410,6 @@
     min-height: 100%;
 
     .select2-selection__choice {
-      display: flex;
-      flex-flow: row-reverse;
       background: none;
       border: none;
       color: $color-title;
@@ -420,17 +418,22 @@
       background-color: #fff;
       box-shadow: 0 2px 8px 1px #dedede;
       border-radius: 0;
-      padding: 12px 10px 12px 15px;
+      padding: 12px 25px 12px 15px;
       margin-top: 2.5px;
       margin-bottom: 2.5px;
 
       .select2-selection__choice__remove {
-        margin-left: 10px;
-        display: flex;
-        align-items: center;
-        @include fontSize(25px);
+        @include fontSize(32px);
         line-height: 0;
         color: #dbdbdb;
+        right: 0;
+        left: auto;
+        top: 50%;
+        transform: translateY(calc(-50% - 2px));
+        border: none;
+        width: 20px;
+        height: 20px;
+
       }
     }
   }
@@ -462,6 +465,8 @@
 
 .item-flex .select2-container--default {
   width: 100% !important;
+  display: flex;
+  align-items: center;
 }
 
 #profession-select {
