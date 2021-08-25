@@ -1,0 +1,57 @@
+.decor-line {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color: $color-text;
+    background-image: linear-gradient(90deg, transparent 50%, #fcfcfc 50%);
+    background-size: 5px 2.5px;
+  }
+}
+
+/************************************/
+
+.wrap-clear-filtr {
+  align-self: flex-end;
+}
+
+.clear-filtr {
+  color: #c7c7c7;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include fontSize(13px);
+  padding-top: 14px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1rem;
+
+  @media only screen and (min-width : 1200px) {
+    display: block;
+  }
+
+  &:hover {
+    color: $color-title;
+  }
+
+  &:hover .icon-filter {
+    fill: $color-title;
+  }
+
+  .icon-filter {
+    width: 17px;
+    height: 21px;
+    fill: #dbdbdb;
+    margin-left: 6px;
+    transition: 0.25s;
+  }
+}
+

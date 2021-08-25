@@ -1,0 +1,135 @@
+/*!
+ *!
+ *! _____ grid.css v1.0.0 | GPL v2 License | github.com/avovkdesign/grid
+ *! */
+.grid {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.grid [class*="col-"] {
+    width: 100%;
+    margin-left: 0
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        width: 100%
+    }
+
+    .grid [class*="col-"] {
+        float: left;
+        margin-left: 1.694915254%;
+        margin-right: 0
+    }
+
+    .grid .newrow:before, .grid:after, .grid:before {
+        display: table;
+        line-height: 0;
+        content: ""
+    }
+
+    .grid .newrow, .grid .newrow:before, .grid:after {
+        clear: both
+    }
+
+    .grid .newrow, .grid [class*="col-"]:first-of-type {
+        margin-left: 0
+    }
+
+    .grid .col-1 {
+        width: 6.779661017%
+    }
+
+    .grid .col-2 {
+        width: 15.25423729%
+    }
+
+    .grid .col-3 {
+        width: 23.72881356%
+    }
+
+    .grid .col-4 {
+        width: 32.20338983%
+    }
+
+    .grid .col-5 {
+        width: 40.6779661%
+    }
+
+    .grid .col-6 {
+        width: 49.15254237%
+    }
+
+    .grid .col-7 {
+        width: 57.62711864%
+    }
+
+    .grid .col-8 {
+        width: 66.10169492%
+    }
+
+    .grid .col-9 {
+        width: 74.57627119%
+    }
+
+    .grid .col-10 {
+        width: 83.05084746%
+    }
+
+    .grid .col-11 {
+        width: 91.52542373%
+    }
+
+    .grid .col-12 {
+        width: 100%
+    }
+}
+
+.clear:before, .clear:after,
+.clearfix:before, .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: ""
+}
+
+.clear:before,
+.clear:after,
+.clearfix:after {
+    clear: both
+}
+
+
+
+.hide {
+    display: none
+}
+
+.on-mobile {
+    display: block
+}
+
+.on-desktop, .on-tablet {
+    display: none
+}
+
+@media screen and (min-width: 768px) {
+    .on-mobile {
+        display: none
+    }
+
+    .on-tablet {
+        display: block
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .on-tablet {
+        display: none
+    }
+
+    .on-desktop {
+        display: block
+    }
+}

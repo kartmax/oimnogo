@@ -1,0 +1,33 @@
+.paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 15px auto 60px;
+  padding: 0 15px;
+  list-style: none;
+
+  @media only screen and (min-width : 768px) {
+    margin: 25px auto 90px;
+  }
+
+  a, span {
+    padding-left: 14px;
+    padding-right: 14px;
+    color: $color-title;
+    @include fontSize(18px);
+  }
+
+  .next {
+    padding-left: 30px;
+  }
+
+  .current {
+    text-decoration: underline;
+  }
+
+  .ellipse {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

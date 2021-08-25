@@ -1,0 +1,646 @@
+.advanced-search.active-adv {
+  display: flex;
+}
+.advanced-search {
+  display: none;
+  position: relative;
+  width: 100%;
+  flex-flow: wrap;
+  align-items: flex-start;
+  padding-bottom: 53px;
+
+  @media only screen and (min-width : 768px) {
+    margin-top: 17px;
+    padding-top: 20px;
+  }
+
+  @media only screen and (min-width : 1200px) {
+    margin-top: 0;
+    padding-top: 50px;
+  }
+
+  &:before {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    height: 1px;
+    border-top: 1px solid #e6e6e6;
+    opacity: 0.76;
+
+    @media only screen and (min-width : 768px) {
+      display: block;
+    }
+  }
+
+  .item-flex {
+
+    @media only screen and (min-width : 1200px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  /****************TO TOWN*********************/
+
+  .wrap-to-whom {
+
+    .wrap-check-disability {
+
+      label {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        letter-spacing: -0.9px;
+      }
+
+      input {
+        width: 0;
+      }
+
+      .checkbox-wrap {
+        position: relative;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .checkbox {
+        width: 20px;
+        height: 30px;
+        border: none;
+        background: none;
+        box-shadow: none;
+
+        &:before {
+          content: url("../img/disability.svg");
+          z-index:1;
+          width: 23px;
+          height: 30px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+
+      .checkbox-checked {
+        &:before {
+          content: url("../img/disability-color.svg");
+        }
+      }
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      fill: #dbdbdb;
+      width: 24px;
+      min-width: 24px;
+      height: 24px;
+      margin-right: 15px;
+    }
+  }
+
+  /*************multiselect bootstrap******************/
+
+  select {
+    opacity: 0;
+  }
+
+  .multiselect-native-select {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 49px;
+    border-top: 1px solid #a6a6a6;
+    border-bottom: 1px solid #c8c7c7;
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+
+    &:before {
+      content: url("../img/icon-select.svg");
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .multiselect-selected-text {
+      letter-spacing: 0;
+    }
+
+    .btn-group {
+      width: 100%;
+
+      button {
+        border: none;
+        background: none !important;
+        box-shadow: none !important;
+
+        .caret {
+          display: none;
+        }
+      }
+
+      .multiselect-container {
+        display: none;
+        border-radius: 0;
+      }
+    }
+    .btn-group.open {
+      .multiselect-container {
+        display: block;
+      }
+    }
+
+    button {
+      padding: 10px 40px 10px 15px;
+      text-align: left  ;
+      background: none;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      justify-content: flex-start;
+      outline: none;
+    }
+
+    .multiselect-selected-text {
+      color: $color-title;
+      @include fontSize(15px);
+      font-weight: 700;
+    }
+
+    .multiselect-selected-text {
+      white-space: pre-line;
+    }
+
+    .multiselect-container {
+      width: 100%;
+      background: #fff;
+      z-index: 100;
+      top: calc(100% + 1px);
+      padding: 15px 0;
+      box-shadow: 0 8px 25px 1px rgba(0, 0, 0, 0.13);
+
+      li.active {
+        a {
+          background: none;
+        }
+      }
+
+      li {
+        display: flex;
+      }
+
+      a {
+        width: 100%;
+        margin: 0;
+      }
+
+      label {
+        display: flex;
+        align-items:center;
+        padding: 8px 25px 8px 0;
+        color: $color-title;
+        @include fontSize(15px);
+        font-weight: 400;
+        height: auto;
+        white-space: pre-line;
+      }
+
+      input {
+        position: relative;
+        margin-right: 40px;
+        margin-left: 0;
+        margin-bottom: 0;
+        border: none;
+        background: none;
+
+        &:before {
+          content: '';
+          width: 23px;
+          height: 19px;
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+
+/**********multiselect to-town*******************/
+
+      input[value=animals] {
+        &:before {
+          background-image: url("../img/foot-animal.svg");
+        }
+      }
+
+      li.active input[value=animals] {
+        &:before {
+          background-image: url("../img/foot-animal-color.svg");
+        }
+      }
+
+      input[value=children] {
+        &:before {
+          background-image: url("../img/hat-child.svg");
+        }
+      }
+
+      li.active input[value=children] {
+        &:before {
+          background-image: url("../img/hat-child-color.svg");
+        }
+      }
+
+      input[value=women] {
+        &:before {
+          background-image: url("../img/woman-hat.svg");
+        }
+      }
+
+      li.active input[value=women] {
+        &:before {
+          background-image: url("../img/woman-hat-color.svg");
+        }
+      }
+
+      input[value=men] {
+        &:before {
+          background-image: url("../img/cowboy-hat.svg");
+        }
+      }
+
+      li.active input[value=men] {
+        &:before {
+          background-image: url("../img/cowboy-hat-color.svg");
+        }
+      }
+
+
+/**********multiselect class-services*******************/
+
+      input[value=eko] {
+        &:before {
+          background-image: url("../img/purse.svg");
+        }
+      }
+
+      li.active input[value=eko] {
+        &:before {
+          background-image: url("../img/purse-color.svg");
+        }
+      }
+
+      input[value=standsrt] {
+        &:before {
+          background-image: url("../img/star.svg");
+        }
+      }
+
+      li.active input[value=standsrt] {
+        &:before {
+          background-image: url("../img/star-color.svg");
+        }
+      }
+
+      input[value=vip] {
+        &:before {
+          background-image: url("../img/crown.svg");
+        }
+      }
+
+      li.active input[value=vip] {
+        &:before {
+          background-image: url("../img/crown-color.svg");
+        }
+      }
+
+      input[value=all] {
+        &:before {
+          background-image: url("../img/shop-labels.svg");
+        }
+      }
+
+      li.active input[value=all] {
+        &:before {
+          background-image: url("../img/shop-labels-color.svg");
+        }
+      }
+
+
+      /**********multiselect materials*******************/
+
+      input[value=gipoalergy] {
+        &:before {
+          background-image: url("../img/pills-bottle.svg");
+        }
+      }
+
+      li.active input[value=gipoalergy] {
+        &:before {
+          background-image: url("../img/pills-bottle-color.svg");
+        }
+      }
+
+      input[value=organ] {
+        &:before {
+          background-image: url("../img/leafs.svg");
+        }
+      }
+
+      li.active input[value=organ] {
+        &:before {
+          background-image: url("../img/leafs-color.svg");
+        }
+      }
+
+      input[value=material-client] {
+        &:before {
+          background-image: url("../img/beauty-products.svg");
+        }
+      }
+
+      li.active input[value=material-client] {
+        &:before {
+          background-image: url("../img/beauty-products-color.svg");
+        }
+      }
+
+      /**********multiselect service*******************/
+
+      input[value=wi-fi] {
+        &:before {
+          background-image: url("../img/wifi-signal.svg");
+        }
+      }
+
+      li.active input[value=wi-fi] {
+        &:before {
+          background-image: url("../img/wifi-signal-color.svg");
+        }
+      }
+
+      input[value=parking] {
+        &:before {
+          background-image: url("../img/parked-car.svg");
+        }
+      }
+
+      li.active input[value=parking] {
+        &:before {
+          background-image: url("../img/parked-car-color.svg");
+        }
+      }
+
+      input[value=child-room] {
+        &:before {
+          background-image: url("../img/bear.svg");
+        }
+      }
+
+      li.active input[value=child-room] {
+        &:before {
+          background-image: url("../img/bear-color.svg");
+        }
+      }
+
+      input[value=speak-english] {
+        &:before {
+          background-image: url("../img/language.svg");
+        }
+      }
+
+      li.active input[value=speak-english] {
+        &:before {
+          background-image: url("../img/language-color.svg");
+        }
+      }
+    }
+  }
+
+  /***************WRAP RANGE****************/
+
+
+  .wrap-range {
+    p {
+      padding-top: 0;
+      padding-bottom: 15px;
+    }
+
+    .rating-range {
+      .ui-slider-handle:last-of-type {
+        margin-left: -22px;
+      }
+    }
+
+    label {
+      @include fontSize(15px);
+      color: $color-title;
+    }
+
+    input {
+      box-shadow: none;
+      font-size: 0;
+    }
+
+    .ui-slider {
+      width: 100%;
+      background-image: linear-gradient(to top, #ebedee 0%, #f4f6f7 100%);
+      height: 12px;
+      border-radius: 0;
+      border: none;
+
+      .ui-slider-range {
+        background-image: linear-gradient(to top, #a4d7ce 0%, #b4e2da 100%);
+        border: none;
+      }
+
+      .ui-slider-handle:nth-of-type(2) {
+        left: auto;
+        right: 0;
+      }
+
+      .ui-slider-handle {
+        width: 22px;
+        height: 22px;
+        margin-left: 0;
+        margin-right: 0;
+        box-shadow: 0 3px 7px 1px #dedede;
+        background-color: #fff;
+        border-radius: 0;
+        outline: none;
+        cursor: pointer;
+        border: none;
+
+        .value-rating {
+          position: absolute;
+          bottom: -31px;
+          left: 50%;
+          transform: translateX(-50%);
+          color: $color-text;
+          @include fontSize(15px);
+        }
+      }
+    }
+  }
+
+
+  .wrap-filter-check {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+
+    .wrap-check {
+      margin-bottom: 13px;
+    }
+
+    .wrap-check:last-child {
+      margin-bottom: 0;
+    }
+
+    .checkbox-wrap {
+      margin-right: 15px;
+    }
+
+    label {
+      color: $color-title;
+      @include fontSize(15px);
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .checkbox {
+      width: 21px;
+      height: 21px;
+      border: none;
+      background: none;
+      box-shadow: none;
+
+      &:before {
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .wrap-actiy {
+      .checkbox {
+        &:before {
+          content: url("../img/percentage.svg");
+        }
+      }
+
+      .checkbox.checkbox-checked {
+        &:before {
+          content: url("../img/percentage-color.svg");
+        }
+      }
+    }
+
+    .wrap-taxi {
+      .checkbox {
+        &:before {
+          content: url("../img/frontal-taxi-cab.svg");
+        }
+      }
+
+      .checkbox.checkbox-checked {
+        &:before {
+          content: url("../img/frontal-taxi-cab-color.svg");
+        }
+      }
+    }
+
+    .wrap-consultation {
+      .checkbox {
+        &:before {
+          content: url("../img/consultation.svg");
+        }
+      }
+
+      .checkbox.checkbox-checked {
+        &:before {
+          content: url("../img/consultation-color.svg");
+        }
+      }
+    }
+
+    .wrap-specialized {
+      .checkbox {
+        &:before {
+          content: url("../img/specialist-user.svg");
+        }
+      }
+
+      .checkbox.checkbox-checked {
+        &:before {
+          content: url("../img/specialist-user-color.svg");
+        }
+      }
+    }
+
+  }
+
+
+  @media only screen and (max-width : 1199px){
+    .wrap-to-whom {
+      order: 1;
+    }
+
+    .wrap-rating-masteer {
+      order: 2;
+    }
+
+    .wrap-class-services {
+      order: 3;
+    }
+
+    .wrap-price {
+      order: 4;
+    }
+
+    .wrap-materials {
+      order: 5;
+    }
+
+    .wrap-filter-check {
+      order: 6;
+    }
+
+    .wrap-service {
+      order: 7;
+      margin-top: -55px;
+    }
+
+    .wrap-clear-filtr {
+      order: 8;
+    }
+  }
+
+  @media only screen and (max-width : 767px){
+    .wrap-price {
+      order: 3;
+    }
+    .wrap-filter-check {
+      order: 7;
+    }
+    .wrap-class-services {
+      order: 4;
+    }
+    .wrap-service {
+      order: 6;
+      margin-top: 20px;
+    }
+  }
+}
+
+

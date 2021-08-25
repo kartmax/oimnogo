@@ -1,0 +1,89 @@
+/*!
+ *! ____ LAYOUT ________________________________ */
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-width: 280px;
+    padding: 0;
+    margin: 0;
+}
+
+.maxwidth {
+    max-width: 1260px;
+    //width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.maxwidth .maxwidth,
+.maxwidth .grid,
+.grid .maxwidth,
+.grid .grid {
+    width: 100%;
+}
+
+/* module post layout */
+
+#content {
+    display: block;
+}
+.sidebar {
+    display: none;
+}
+.sidebar.on-mobile {
+    display: block;
+}
+
+/* ____ container type ___ */
+.container--full .bodywrap {}
+.container--boxed .pagewrap {box-sizing:border-box;padding-left: 40px;padding-right: 40px;}
+
+
+@media screen and (min-width: 1024px) {
+
+    .layout-leftbar  .sidebar,
+    .layout-rightbar .sidebar,
+    .layout-both     .sidebar { display: block; }
+
+    .layout-leftbar  #content { float: right; }
+    .layout-leftbar  .sidebar { float: left; }
+
+    .layout-rightbar #content { float: left; }
+    .layout-rightbar .sidebar { float: right; }
+
+    .layout-both #content { float: left; }
+    .layout-both #primary-sidebar { float: right; }
+    .layout-both #secondary-sidebar  { float: left; }
+
+    .layout-leftbar  #content,
+    .layout-rightbar #content { width: 69.44444444444444%; }
+    .layout-leftbar .sidebar,
+    .layout-rightbar .sidebar { width: 26.85185185185185%; }
+
+    .layout-both #content  { width: 48.27586206896552%; }
+    .layout-both .sidebar  { width: 17.24137931034483%; }
+
+
+
+    .layout-full .pagewrap.maxwidth { width: 100%; max-width: 100%; }
+    .layout-full .pagewrap.maxwidth #content { padding-left: 3%; padding-right: 3%; }
+
+    .layout-box #content,
+    .layout-full #content { width: auto; }
+    .layout-center #content { width: 70%; }
+
+    .layout-box #content,
+    .layout-full #content,
+    .layout-center #content { float: none; margin-left: auto; margin-right: auto; }
+
+    .layout-box .sidebar,
+    .layout-full .sidebar,
+    .layout-center .sidebar { display: none; }
+
+}

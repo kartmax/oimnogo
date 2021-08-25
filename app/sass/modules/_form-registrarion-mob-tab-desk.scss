@@ -1,0 +1,150 @@
+/***************on-desctop*******************/
+.wrap-submit.on-desktop {
+  display: none;
+
+  @media only screen and (min-width : 1200px) {
+    display: flex;
+  }
+
+  .adv-search-btn {
+    flex-flow: row;
+  }
+}
+
+.wrap-clear-filtr.on-desktop {
+  display: none;
+
+  @media only screen and (min-width : 1200px) {
+    display: flex;
+  }
+}
+
+/******************on-tablet*****************/
+
+.wrap-submit.on-tablet {
+  display: none;
+
+  @media only screen and (min-width : 768px) {
+    display: flex;
+  }
+
+  @media only screen and (min-width : 1200px) {
+    display: none;
+  }
+
+  input {
+    margin-bottom: 15px;
+    margin-right: 15px;
+    max-width: 175px;
+    min-width: 175px;
+  }
+
+  .adv-search-btn {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    span {
+      padding-left: 0;
+    }
+
+    @media only screen and (min-width : 870px) {
+      flex-flow: row;
+
+      span {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .wrap-clear-filtr {
+    display: none;
+  }
+  .active-clear {
+    display: block;
+    width: 100%;
+  }
+
+  .clear-filtr {
+    padding-top: 0;
+  }
+}
+
+
+/************on-mobile**********************/
+.form-registration {
+
+  .wrap-submit.on-mobile-top.active-after {
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      border-top: 1px solid #e6e6e6;
+    }
+  }
+
+  .on-mobile {
+    input {
+      min-width: 140px;
+      min-height: 49px;
+      margin-bottom: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  .wrap-submit.on-mobile-top {
+    flex-flow: nowrap;
+
+    @media only screen and (min-width : 768px) {
+      display: none;
+    }
+
+    input {
+      margin-bottom: 15px;
+      margin-right: 15px;
+    }
+    .no-active-input {
+      display: none;
+    }
+
+    .adv-search-btn {
+      display: flex;
+      flex-flow: column;
+      margin-bottom: 15px;
+      margin-top: 0;
+      white-space: pre-line;
+
+      @media only screen and (min-width : 480px) {
+        display: block;
+      }
+    }
+
+    .click-adv-btn {
+      display: block;
+      margin-bottom: 0;
+      padding-right: 20px;
+    }
+
+    span {
+      padding-left: 0;
+    }
+  }
+
+  .wrap-clear-filtr.on-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 20px;
+    width: 100%;
+
+    @media only screen and (min-width : 768px) {
+      display: none;
+    }
+
+    .clear-filtr {
+      padding-top: 0;
+    }
+  }
+}
