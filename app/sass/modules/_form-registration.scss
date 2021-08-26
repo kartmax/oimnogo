@@ -98,6 +98,10 @@
       min-height: 49px;
     }
   }
+
+  .select2-search--inline {
+    width: 100%;
+  }
 }
 
 .item-flex {
@@ -225,6 +229,13 @@
 .datetimepicker {
   height: 100%;
   text-transform: lowercase;
+}
+
+.xdsoft_ {
+  @media only screen and (max-width : 480px){
+    width: calc(100% - 40px);
+    left: 20px !important;
+  }
 }
 
 .xdsoft_datetimepicker .xdsoft_today_button {
@@ -418,21 +429,23 @@
       background-color: #fff;
       box-shadow: 0 2px 8px 1px #dedede;
       border-radius: 0;
-      padding: 12px 25px 12px 15px;
+      padding: 12px 20px 12px 15px;
       margin-top: 2.5px;
       margin-bottom: 2.5px;
 
       .select2-selection__choice__remove {
-        @include fontSize(32px);
+        @include fontSize(25px);
         line-height: 0;
         color: #dbdbdb;
         right: 0;
         left: auto;
         top: 50%;
-        transform: translateY(calc(-50% - 2px));
+        transform: translateY(-50%);
         border: none;
         width: 20px;
         height: 20px;
+        display: flex;
+        justify-content: center;
 
       }
     }
