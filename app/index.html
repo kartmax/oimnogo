@@ -111,96 +111,99 @@
 		</div>
 
 		<div class="advanced-search">
-			<div class="item-flex wrap-to-whom">
+			<div class="advanced-search-wrapper">
+				<div class="item-flex wrap-to-whom">
 
-				<select class="to-whom multiselect-bootstrap" multiple="multiple">
-					<option value="men">мужчинам</option>
-					<option value="women">женщинам</option>
-					<option value="children">детям</option>
-					<option value="animals">животным</option>
-				</select>
+					<select class="to-whom multiselect-bootstrap" multiple="multiple">
+						<option value="men">мужчинам</option>
+						<option value="women">женщинам</option>
+						<option value="children">детям</option>
+						<option value="animals">животным</option>
+					</select>
 
-				<div class="wrap-check-disability">
-					<label>
-						<input type="checkbox">Условия для людей с ограниченными физическими возможностями
-					</label>
+					<div class="wrap-check-disability">
+						<label>
+							<input type="checkbox">Условия для людей с ограниченными физическими возможностями
+						</label>
+					</div>
+				</div>
+
+				<div class="item-flex wrap-range wrap-rating-masteer">
+					<p>
+						<label>Рейтинг мастера</label>
+					</p>
+					<div class="rating-range">
+						<input type="text" data-min="1" data-max="10" data-step="1" class="input-rating" readonly style="border:0; color:#f6931f; font-weight:bold;">
+					</div>
+				</div>
+
+				<div class="item-flex wrap-range wrap-price">
+					<p>
+						<label>Цена (руб)</label>
+					</p>
+					<div class="rating-range">
+						<input type="text" data-min="500" data-max="10000" data-step="1"  class="input-rating" readonly style="border:0; color:#f6931f; font-weight:bold;">
+					</div>
+				</div>
+
+				<div class="item-flex wrap-filter-check">
+					<div class="wrap-check wrap-actiy">
+						<label>
+							<input type="checkbox">Акции, скидки
+						</label>
+					</div>
+					<div class="wrap-check wrap-taxi">
+						<label>
+							<input type="checkbox">Выезд на дом
+						</label>
+					</div>
+					<div class="wrap-check wrap-consultation">
+						<label>
+							<input type="checkbox">Предварительная консультация
+						</label>
+					</div>
+					<div class="wrap-check wrap-specialized">
+						<label>
+							<input type="checkbox">Узкая специализация мастра
+						</label>
+					</div>
+				</div>
+
+				<div class="item-flex wrap-class-services">
+					<select class="class-services multiselect-bootstrap" multiple="multiple">
+						<option value="eko">эконом</option>
+						<option value="standsrt">стандарт</option>
+						<option value="vip">премиум</option>
+					</select>
+				</div>
+
+				<div class="item-flex wrap-materials">
+					<select class="materials multiselect-bootstrap" multiple="multiple">
+						<option value="gipoalergy">гипоаллергенные</option>
+						<option value="organ">органические</option>
+						<option value="material-client">работа с материалами клиента</option>
+					</select>
+				</div>
+
+				<div class="item-flex wrap-service">
+					<select class="service multiselect-bootstrap" multiple="multiple">
+						<option value="wi-fi">wi-fi</option>
+						<option value="parking">парковка</option>
+						<option value="child-room">детская комната</option>
+						<option value="speak-english">персонал говорит на английском</option>
+					</select>
+				</div>
+
+				<div class="wrap-clear-filtr on-mobile">
+					<input type="submit" value="подобрать">
+					<p class="clear-filtr">Очистить <svg class="icon-filter"><use xlink:href="#filter"></use></svg></p>
+				</div>
+
+				<div class="item-flex wrap-clear-filtr on-desktop">
+					<p class="clear-filtr">Очистить фильтры</p>
 				</div>
 			</div>
-
-			<div class="item-flex wrap-range wrap-rating-masteer">
-				<p>
-					<label>Рейтинг мастера</label>
-				</p>
-				<div class="rating-range">
-					<input type="text" data-min="1" data-max="10" data-step="1" class="input-rating" readonly style="border:0; color:#f6931f; font-weight:bold;">
-				</div>
-			</div>
-
-			<div class="item-flex wrap-range wrap-price">
-				<p>
-					<label>Цена (руб)</label>
-				</p>
-				<div class="rating-range">
-					<input type="text" data-min="500" data-max="10000" data-step="1"  class="input-rating" readonly style="border:0; color:#f6931f; font-weight:bold;">
-				</div>
-			</div>
-
-			<div class="item-flex wrap-filter-check">
-				<div class="wrap-check wrap-actiy">
-					<label>
-						<input type="checkbox">Акции, скидки
-					</label>
-				</div>
-				<div class="wrap-check wrap-taxi">
-					<label>
-						<input type="checkbox">Выезд на дом
-					</label>
-				</div>
-				<div class="wrap-check wrap-consultation">
-					<label>
-						<input type="checkbox">Предварительная консультация
-					</label>
-				</div>
-				<div class="wrap-check wrap-specialized">
-					<label>
-						<input type="checkbox">Узкая специализация мастра
-					</label>
-				</div>
-			</div>
-
-			<div class="item-flex wrap-class-services">
-				<select class="class-services multiselect-bootstrap" multiple="multiple">
-					<option value="eko">эконом</option>
-					<option value="standsrt">стандарт</option>
-					<option value="vip">премиум</option>
-				</select>
-			</div>
-
-			<div class="item-flex wrap-materials">
-				<select class="materials multiselect-bootstrap" multiple="multiple">
-					<option value="gipoalergy">гипоаллергенные</option>
-					<option value="organ">органические</option>
-					<option value="material-client">работа с материалами клиента</option>
-				</select>
-			</div>
-
-			<div class="item-flex wrap-service">
-				<select class="service multiselect-bootstrap" multiple="multiple">
-					<option value="wi-fi">wi-fi</option>
-					<option value="parking">парковка</option>
-					<option value="child-room">детская комната</option>
-					<option value="speak-english">персонал говорит на английском</option>
-				</select>
-			</div>
-
-			<div class="wrap-clear-filtr on-mobile">
-				<input type="submit" value="подобрать">
-				<p class="clear-filtr">Очистить <svg class="icon-filter"><use xlink:href="#filter"></use></svg></p>
-			</div>
-
-			<div class="item-flex wrap-clear-filtr on-desktop">
-				<p class="clear-filtr">Очистить фильтры</p>
-			</div>
+			
 		</div>
 	</form>
 

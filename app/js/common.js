@@ -238,8 +238,7 @@ $(function() {
     //adv-search
     $('.form-registration .adv-search-btn').click(function () {
         $('.form-registration .adv-search-btn .icon-adv-search').toggleClass('transdeg');
-        $('.advanced-search').toggleClass('active-adv');
-
+        $('.advanced-search').slideToggle().toggleClass('active-adv');
     });
 
     //range
